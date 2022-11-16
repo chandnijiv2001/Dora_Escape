@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            min-height: 100vh;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+           
+        }
+        .countdown{
+            postion:relative;
+            width:400px;
+            height: 400px;
+            transform-style:preserve-3d;
+            perspective: 1000px;
+        }
+        .countdown:before{
+            content:'';
+            position: absolute;
+            width:100%;
+            bottom: -50px;
+            left:0;
+            height:10px;
+            background: black;
+            border-radius:50%;
+            filter: blur(14px);
+            animation:shadow 1s linear infinite;
+            transform-style:preserve-3d;
+          }
+          @keyframes shadow {
+            0%,100%{
+                transform:scale(0.5)
+            }
+            50%{
+                transform:scale(1)
+            }
+            
+          }
+          .countdown .number{
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left:0;
+            right:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            transform:rotateY(270deg);
+            animation: animate 10s linear infinite;
+          }
+
+          .countdown .number:nth-child(1){
+            animation-delay:0s;
+
+          }
+          .countdown .number:nth-child(2){
+            animation-delay:1s;
+
+          }
+
+          .countdown .number:nth-child(3){
+            animation-delay:2s;
+
+          }
+          .countdown .number:nth-child(4){
+            animation-delay:3s;
+
+          }
+          .countdown .number h2{
+            margin: 0;
+            padding: 0;
+            font-size: 20em;
+            color:black;
+        }
+        @keyframes animate{
+            0%{
+                transform: rotateY(90deg);
+            }
+            10%,100%{
+                transform: rotateY(-90deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <div class="countdown">
+     <div class="number">
+        <h2>3</h2></div>
+        <div class="number">
+            <h2>2</h2></div>
+            <div class="number">
+                <h2>1</h2></div>
+                <div class="number">
+                    <h2>GO!</h2></div>
+                    
+   </div>
+   
+
+
+</body>
+</html>
