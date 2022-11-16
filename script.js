@@ -174,6 +174,8 @@ function playAgain(){
 // //    document.querySelector('.aniani').id="aniani1"
      
 //      go1.style.animation="animate 1s linear";
+gameOver.innerHTML = "LETS GO"
+reset.style.opacity=0
 obstacle=document.querySelector('.obstacle')
 obstacle.style.animation="obstacleAni 5s linear infinite";
 
